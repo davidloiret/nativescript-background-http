@@ -1,19 +1,36 @@
 {
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NativeScript/nativescript-background-http"
+  },
+  "name": "nativescript-background-http",
+  "version": "2.4.0",
+  "nativescript": {
+    "platforms": {
+      "ios": "2.4.0",
+      "android": "2.4.0"
+    }
+  },
+  "main": "background-http.js",
+  "homepage": "http://nativescript.github.io/nativescript-background-http/",
+  "url": "https://github.com/NativeScript/nativescript-background-http/issues",
+  "license": "Apache-2.0",
+  "keywords": [
+    "background",
+    "http",
+    "upload",
+    "download",
+    "NativeScript"
+  ],
+  "dependencies": {
+    "tns-core-modules": "^2.4.0"
+  },
   "devDependencies": {
-    "grunt": "~0.4.5",
-    "grunt-contrib-clean": "^0.6.0",
-    "grunt-contrib-copy": "^0.8.0",
-    "grunt-exec": "^0.4.6",
-    "grunt-mkdir": "^0.1.2",
-    "grunt-typedoc": "^0.2.2",
-    "stream-throttle": "^0.1.3",
-    "tsd": "^0.6.5",
-    "typedoc": "^0.3.10",
+    "tns-platform-declarations": "next",
     "typescript": "^2.0.3"
   },
   "scripts": {
-    "tsc": "tsc -p nativescript-background-http",
-    "link": "cd nativescript-background-http && npm link && cd .. && cd examples/SimpleBackgroundHttp && npm link nativescript-background-http && cd ../..",
-    "start": "node ./examples/www/server.js 8083"
+    "tsc": "tsc",
+    "prepublish": "tsc"
   }
 }
